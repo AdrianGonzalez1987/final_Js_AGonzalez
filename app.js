@@ -37,27 +37,24 @@ const GuardarDP = () => {
 }
 
 const listandoDP = () => {
-    //listaPacientesDOM.innerHTML ='';
+    listaPacientesDOM.innerHTML ='';
     
     if(ArraylistaPacientes === null){
         ArraylistaPacientes = [];
     }else{
        
         ArraylistaPacientes.forEach(pacient => {
-
-        if(pacient.estado === false){ 
-           
-             listaPacientesDOM.innerHTML += 
+        listaPacientesDOM.innerHTML += 
             `<form class=" row mb-4"  name="formu"><div class="col-4  text-start"><h3> Nombre: ${pacient.nombre}, ${pacient.apellido}, Edad: ${pacient.edad}</h3><p>Email: ${pacient.email} Celular: ${pacient.celular}</p></div><div class="col-7 text-start"><b>Mensaje: ${pacient.mensaje}</b> - ${pacient.estado}</div><div class="col-1 d-flex flex-row-reverse align-self-center " ><span class="float-right"><span class="material-icons">check</span><span class="material-icons">cancel</span></span></div></form> `
 
-         }else{
-            listaPacientesDOM.innerHTML += 
-            `<form class="formi row mb-4"  name="formu"><div class="col-4  text-start"><h3> Nombre: ${pacient.nombre}, ${pacient.apellido}, Edad: ${pacient.edad}</h3><p>Email: ${pacient.email} Celular: ${pacient.celular}</p></div><div class="col-7 text-start"><b>Mensaje: ${pacient.mensaje}</b> - ${pacient.estado}</div><div class="col-1 d-flex flex-row-reverse align-self-center " ><span class="float-right"><span class="material-icons">check</span><span class="material-icons">cancel</span></span></div></form> `
-        } 
+        //  else{
+        //     listaPacientesDOM.innerHTML += 
+        //     `<form class="formi row mb-4"  name="formu"><div class="col-4  text-start"><h3> Nombre: ${pacient.nombre}, ${pacient.apellido}, Edad: ${pacient.edad}</h3><p>Email: ${pacient.email} Celular: ${pacient.celular}</p></div><div class="col-7 text-start"><b>Mensaje: ${pacient.mensaje}</b> - ${pacient.estado}</div><div class="col-1 d-flex flex-row-reverse align-self-center " ><span class="float-right"><span class="material-icons">check</span><span class="material-icons">cancel</span></span></div></form> `
+        // } 
 
             
         });
-    }return;
+    }
 }
 
 ///PARA ELIMINAR
@@ -75,8 +72,9 @@ const eliminarDP = (mensaje) => {
     })
     
     ArraylistaPacientes.splice(indexArray,1)
-    swal("MENSAJE ELIMINADO","" ,"error",{button: "Continuar",});
     GuardarDP();
+    swal("MENSAJE ELIMINADO","" ,"error",{button: "Continuar",});
+    
     
 }
 
