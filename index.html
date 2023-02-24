@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <!--<script defer src="listaPaci.js"></script>-->
+    
+    
+    <title>Consulta</title>
+    
+</head>
+<body>
+    
+    <header>
+        
+    </header>
+    <nav class="navbar navbar-expand-sm navbar-dark p-2 sticky-top bg-gradient row-1"> <!--navbar es la clase que usa bootstrap y navbar-expand-md es para que colapse-->
+        <div class="container-fluid d-flex-sm justify-content-between col-6"> <!--contenedor de tipo fluid recomendado por bootstrap-->
+                        <ul class="navbar-nav me-auto"> <!--navbar-nav es la clase que aplica bootstrap a listas desordenadas, ms-auto coloca margenes al menu-->
+                            <li class="nav-item">
+                                <a class="nav-link active" href="index.html" id="btnconsulta">CONSULTA</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="#aqui">VER CONSULTA</a>
+                            </li>  
+                        </ul>
+        </div>
+        <div class="container-fluid d-flex justify-content-between col-6" id="content">
+            <p  id="temperaturaValor">30°</p>
+            <p id="temperaturaDescripcion">Soleado</p>
+            <p id="ubicacion">Ubicacion</p>
+            <p id="humedad">humedad</p>
+              <img id="iconoAnimado" src="" alt="" heigth="128" width="128">
+            
+        </div>
+</nav>
+<main id="menup">
+    <section class="mt-5 p-3 ">
+        <div class="row mt-5 d-flex justify-content-center">
+            <div class="col-md-8 sm-3 p-3 ">
+                <div>
+                
+                        <div class="card-body p-md-2">
+                            <form id="formulario" class="row g-3 sm-3" id="formull">
+                                <h1 class="card-header">Realice su consulta:</h1>
+                                <div class="col-12 sm-1">
+                                <div class="row mb-3 md-2">
+                                <div class="col">
+                                
+                                        <label for="nombre" class="form-label">Nombre</label>
+                                            <input type="text" class="form-control" placeholder="Nombre" aria-label="Escriba su Nombre" id="nombre" value="" autocomplete="off" required >
+                                    </div>
+                                    <div class="col">
+                                        <label for="apellido" class="form-label">Apellido</label>
+                                            <input type="text" class="form-control" placeholder="Apellido" aria-label="Escriba su Apellido" id="apellido" value=""  autocomplete="off"  required >
+                                    </div>
+                                    
+                                    <div class="col">
+                                        <label for="edad" class="form-label">Indique su edad</label>
+                                            <input type="number" class="form-control" placeholder="Coloque su edad" id="edad" maxlength="3" value=""  autocomplete="off" required >
+                                    </div>
+                                
+                                </div>
+        
+                                <div class="row mb-2">
+            
+                                    <div class=" col">
+                                        <label for="celular" class="form-label">Telefono o Celular</label>
+                                            <input type="number" class="form-control" placeholder="ejm: 011 1234 6789" id="celular" maxlength="12" value="" autocomplete="off" required >
+                                    </div>
+        
+                                    <div class="col">
+                                        <label for="inputEmail4" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="email" placeholder="miCorreo@ejemplo.com" value="" autocomplete="off"  required>
+                                    </div>
+        
+                                </div>
+        
+        
+                                  
+        
+        
+                                <div class="mb-3 mt-3">
+                                    <label for="mensaje" class="form-label">Escriba su comentario</label>
+                                    <textarea class="form-control" id="mensaje"  col="20" rows="3" maxlength="500" placeholder="Escriba aqui su comentario" value= "" autocomplete="off" required > 
+                                        </textarea>
+                                </div>
+        
+                                <div class="col-12">
+                                    <button type="submit"class="btn btn-primary">Enviar Consulta</button>
+                                  <!-- onclick="validar();" <button type="submit" id="btnEnviarConsulta" class="btn btn-primary">Enviar Consulta</button>-->
+                                </div>
+                                </form>
+                                </div>
+                        </div>
+                    </div>   
+                </div>
+            </section>
+
+
+            <section id="aqui"class="text-content-between p-4" >
+               <div id="listaPacientesG" class="listaPacientesG"></div>
+               
+            </section>
+</main>
+<footer id="lahora" class="row footerBg paddingTB wrapper d-flex-sm justify-content-center">
+<div >Hora</div>
+</footer>
+
+
+
+ <!--<script src="validateForm.js"></script>-->  
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script  src="clima.js"></script>
+<script src="app.js"></script>
+<!--<script  src="pacient.js"></script>
+<script src="agregarPaci.js"></script>-->
+
+</body>
+</html>

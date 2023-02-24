@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 90vh;
+    background-image: url("../img/fondo1.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    
+    text-align: center;
+}
+
+main{
+
+    color: azure;
+}
+section{
+    min-height: 60vh;
+}
+img {
+    max-width: 25%;
+    /*min-width: 3%;*/
+}
+form{
+   /* position: absolute;
+    max-width: 200px;
+    max-width: 50%;
+    top: 40%;
+    width: 25%;
+    left: 50%;
+    transform: translate(-50%,-50%);*/
+    padding: 15px;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+    color: #fff  
+}
+.formi{
+    padding: 15px;
+    box-shadow: 0 1rem 1rem rgba(27, 190, 40, 0.705);
+    background-color: rgba(13, 121, 22, 0.253);
+    backdrop-filter: blur(20px);
+    border-radius: 5px;
+    color: #ffffff  
+}
+
+nav {
+    background-color: #0077b6;
+  }
+  nav a:hover {
+    background-color: #024264;
+  }
+
+footer{
+    background-color: black;
+    text-decoration: bold #fff;
+    color:#fff
+    
+}
+.wrapper {
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+  }
+#content{
+    text-decoration: bold #fff;
+    color: #fff;
+    
+}
+.delete-consulta{
+    cursor: pointer;
+}
+#sol{
+    background-image: url(../animated/night.svg);
+}
